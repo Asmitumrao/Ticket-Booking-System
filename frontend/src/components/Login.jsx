@@ -18,7 +18,7 @@ const Form = ({setIsRegistered}) => {
 
     const handleChange = (e) => {
       const { name, value } = e.target;
-      console.log(name, value);
+      // console.log(name, value);
       const data = { ...loginData};
       data[name] = value;
       setLoginData(data);
