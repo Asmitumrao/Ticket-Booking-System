@@ -6,9 +6,13 @@ import eventRouter from "./routes/event.routes.js";
 
 const app = express()
 app.use(cors({
-    origin: "http://localhost:5173", // Your Vite frontend origin
-    credentials: true
-  }));
+  origin: [
+    "http://localhost:5173",
+    "https://eventbookingsystem-nine.vercel.app",
+    "https://eventbookingsystem-git-main-asmit-umraos-projects.vercel.app"
+  ],
+  credentials: true
+}));
 
 app.use(express.urlencoded({extended: true}))
 app.use(cookieParser())
