@@ -95,8 +95,8 @@ const loginUser = async (req, res) => {
         // Set token in HTTP-only cookie
         res.cookie("token", token, {
             httpOnly: true,
-            sameSite: "Lax", // or "Strict" / "None" based on needs
-            secure: false, // true in production with HTTPS;
+            sameSite: 'none',
+            secure: true,// true in production with HTTPS;
             maxAge: 60 * 60 * 1000, // 1 hour
         });
 
